@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import vtubeLogo from "../image/logo.png"
 import HomeIcon from '@mui/icons-material/Home';
 import { AccountCircleOutlined, ExploreOutlined, FlagOutlined, GamesOutlined, HelpOutlineOutlined, HistoryOutlined, LiveTvOutlined, MovieCreationOutlined, MusicNoteOutlined, NewspaperOutlined, SettingsBrightnessOutlined, SettingsOutlined, SportsBaseballOutlined, SubscriptionsOutlined, VideoLibraryOutlined } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -65,10 +66,12 @@ export default function Menu({setDarkMode, darkMode}) {
   return (
     <Container>
         <Wrapper>
-            <Logo>
-                <Img src={vtubeLogo}/>
-                VTube
-            </Logo>
+        <Link to="/" style={{textDecoration: "none", color: 'inherit'}}>
+        <Logo>
+        <Img src={vtubeLogo}/>
+        VTube
+        </Logo>
+        </Link>
             <Items>
                 <HomeIcon/>
                 Home

@@ -3,6 +3,14 @@ import Menu from "./components/Menu"
 import Navbar from "./components/Navbar";
 import { darkTheme, lightTheme } from "./utils/Theme";
 import { useState } from "react";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Video from "./pages/Video.jsx";
+import Home from "./pages/Home.jsx";
+
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +23,7 @@ const Main = styled.div`
 `;
 
 const Wrapper = styled.div`
+  padding: 22px 36px;
 `;
 
 
@@ -26,13 +35,22 @@ function App() {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
 
     <Container>
+      <BrowserRouter>
     <Menu setDarkMode={setDarkMode} darkMode={darkMode} />
     <Main>
       <Navbar />
       <Wrapper>
-        Video Cards
+        <Routes>
+        <Route path="/">
+        <Route index element={<Home />} />
+        <Route path="video">
+        <Route path=":id" element={<Video />} />
+        </Route>
+        </Route>
+        </Routes>
       </Wrapper>
     </Main>
+    </BrowserRouter>
     </Container>
     
     </ThemeProvider>
