@@ -101,7 +101,9 @@ export default function Menu({setDarkMode, darkMode}) {
             <Hr/>
             <Login>
                 sign in to like videos, comment, and subscribe.
+                <Link to="signin" style={{textDecoration: "none"}}>
                 <Button> <AccountCircleOutlined/> SIGN IN</Button>
+                </Link>
             </Login>
             <Hr/>
             <Title>BEST OF VTUBE</Title>
