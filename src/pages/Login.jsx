@@ -8,7 +8,6 @@ const Container = styled.div`
     justify-content: center;
     height: calc(100vh - 20px);
     color: ${({theme}) => theme.text};
-    margin-top: 50px;
 `;
 
 const Wrapper = styled.div`
@@ -37,6 +36,8 @@ const Input = styled.input`
     padding: 10px;
     background-color: transparent;
     width: 100%;
+    color: ${({theme}) => theme.text};
+
 `;
 const Button = styled.button`
     margin-top: 8px;
