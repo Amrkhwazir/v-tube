@@ -33,7 +33,12 @@ const Items = styled.div`
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    padding: 7.5px 0px
+    padding: 7.5px 5px;
+
+    &:hover{
+        background-color: ${({theme}) => theme.soft};
+        color: ${({theme}) => theme.hoverColor};
+    }
 `;
 const Hr = styled.hr`
     margin: 15px 0px;

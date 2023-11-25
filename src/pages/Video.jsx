@@ -1,17 +1,20 @@
 import { AddTaskOutlined, ReplyOutlined, ThumbDownAltOutlined, ThumbUpAltOutlined } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
+import { Comments } from '../components/Comments'
+import Card from '../components/Card'
 
 const Container = styled.div`
   display: flex;
   gap: 24px;
+  font-size: 12px;
 `
 const Content = styled.div`
   flex: 5;
 `
 
 const VideoWrapper = styled.div`
-font-size: 12px;
+
 `
 const Title = styled.h1`
   font-size: 16px;
@@ -105,7 +108,8 @@ const Video = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+            ></iframe>
+            </VideoWrapper>
           <Title>Test Video</Title>
           <Details>
             <Info>7,897,499 views . Jun 22, 2023</Info>
@@ -130,9 +134,26 @@ const Video = () => {
             </ChannelInfo>
             <Subscribe>SUBSCRIBE</Subscribe>
           </Channel>
-        </VideoWrapper>
+          <Hr/>
+          <Comments/>
       </Content>
-      <Recommendation>Recommendation</Recommendation>
+      <Recommendation>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+        <Card type="sm"/>
+      </Recommendation>
     </Container>
   )
 }
